@@ -91,6 +91,9 @@ const App = () => {
             <Menu.Item key="nft">
               <NavLink to="/nftBalance">🖼 NFT Balance</NavLink>
             </Menu.Item>
+            <Menu.Item key="1inch">
+              <NavLink to="/1inch">1inch-DEX</NavLink>
+            </Menu.Item>
           </Menu>
           <div style={styles.headerRight}>
             <Chains />
@@ -111,7 +114,7 @@ const App = () => {
               <Wallet />
             </Route>
             <Route path="/1inch">
-              <InchDex chain="eth" />
+              <InchDex chain="rop" />
             </Route>
             <Route path="/erc20balance">
               <ERC20Balance />

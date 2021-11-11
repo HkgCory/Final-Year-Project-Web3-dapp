@@ -7,8 +7,11 @@ import styles from "./styles";
 
 const chainIds = {
   "0x1": "eth",
+  "0x3" :"rop",
   "0x38": "bsc",
   "0x89": "polygon",
+  "0xa86a":"avax",
+  
 };
 
 const getChainById = (id) => chainIds[id];

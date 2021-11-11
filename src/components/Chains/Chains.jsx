@@ -27,6 +27,16 @@ const menuItems = [
     value: "Avalanche",
     icon: <AvaxLogo />,
   },
+  {
+    key: "0x3",
+    value: "Ropsten",
+    icon: <ETHLogo />,
+  },
+  {
+    key: "0x1",
+    value: "Ethereum",
+    icon: <ETHLogo />,
+  },
 ];
 
 function Chains() {
@@ -35,8 +45,8 @@ function Chains() {
   const [selected, setSelected] = useState({});
 
   useEffect(() => {
-    if (!chainId) switchNetwork("0xa86a");
-    if (chainId !== "0xa86a") switchNetwork("0xa86a");
+    // if (!chainId) switchNetwork("0xa86a");
+    // if (chainId !== "0xa86a") switchNetwork("0xa86a");
 
     const newSelected = menuItems.find((item) => item.key === chainId);
     setSelected(newSelected);
