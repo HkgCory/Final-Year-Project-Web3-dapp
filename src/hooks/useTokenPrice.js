@@ -2,6 +2,12 @@ import { useEffect, useState } from "react";
 import { useMoralis, useMoralisWeb3Api } from "react-moralis";
 import { c2, tokenValueTxt } from "../helpers/formatters";
 
+// const options = {
+//   address: "0xad6d458402f60fd3bd25163575031acdce07538d",
+//   chain: "ropsten",
+//   exchange: "uniswap-v3",
+// };
+// const price = await Moralis.Web3API.token.getTokenPrice(options);
 const useTokenPrice = (options) => {
   const { token } = useMoralisWeb3Api();
   const { isInitialized } = useMoralis();
@@ -23,6 +29,9 @@ const useTokenPrice = (options) => {
         .catch((e) => alert(e.message));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isInitialized]);
+
+
+
 
   const fetchTokenPrice = async (options) => {
     const { chain, address } = options;

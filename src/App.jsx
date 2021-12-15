@@ -22,6 +22,7 @@ import NativeBalance from "components/NativeBalance";
 import "./style.less";
 import QuickStart from "components/QuickStart";
 import Contract from "components/Contract/Contract";
+import Testcontract from "components/Farm/testcontract";
 const { Header } = Layout;
 
 const styles = {
@@ -82,18 +83,21 @@ const App = () => {
             <Menu.Item key="wallet">
               <NavLink to="/wallet">👛 Wallet</NavLink>
             </Menu.Item>
-            <Menu.Item key="balances">
+            {/* <Menu.Item key="balances">
               <NavLink to="/erc20balance">💰 Balances</NavLink>
             </Menu.Item>
             <Menu.Item key="transfers">
               <NavLink to="/erc20transfers">💸 Transfers</NavLink>
-            </Menu.Item>
-            <Menu.Item key="nft">
+            </Menu.Item> */}
+            {/* <Menu.Item key="nft">
               <NavLink to="/nftBalance">🖼 NFT Balance</NavLink>
+            </Menu.Item> */}
+            <Menu.Item key="test">
+              <NavLink to="/testcontract">Farm UI</NavLink>
             </Menu.Item>
-            <Menu.Item key="1inch">
+            {/* <Menu.Item key="1inch">
               <NavLink to="/1inch">1inch-DEX</NavLink>
-            </Menu.Item>
+            </Menu.Item> */}
           </Menu>
           <div style={styles.headerRight}>
             <Chains />
@@ -122,8 +126,11 @@ const App = () => {
             <Route path="/erc20transfers">
               <ERC20Transfers />
             </Route>
-            <Route path="/nftBalance">
+            <Route path="/nft">
               <NFTBalance />
+            </Route> 
+            <Route path="/Testcontract">
+              <Testcontract />
             </Route>
             <Route path="/contract">
               <Contract />

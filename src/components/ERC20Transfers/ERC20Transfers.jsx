@@ -50,7 +50,9 @@ function ERC20Transfers() {
               ? `https://polygonscan.com/tx/${hash}`
               : chainId === "0xa86a"
               ? `https://explorer.avax.network/search?query=${hash}`
-              : `https://ropsten.etherscan.io/search?query=${hash}`
+              : chainId === "0x3"
+              ?`https://ropsten.etherscan.io/search?query=${hash}`
+              :`https://ropsten.etherscan.io/search?query=${hash}`
 
           }
           target="_blank"

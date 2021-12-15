@@ -37,6 +37,11 @@ const menuItems = [
     value: "Ethereum",
     icon: <ETHLogo />,
   },
+  {
+    key: "0xa869",
+    value: "Fuji",
+    icon: <AvaxLogo />,
+  },
 ];
 
 function Chains() {
