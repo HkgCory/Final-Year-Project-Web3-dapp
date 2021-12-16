@@ -42,7 +42,8 @@ const pid = config.FUJI.pid;
   function Deposit(value) {
     //write contract
     // setDval(document.querySelector('input').value) 
-    let key=BigNumber(value *config.decimals)
+    let key= web3.utils.toWei(value);
+    // let key=BigNumber(value *config.decimals)
     MasterContract.methods
       .deposit(pid, key)
       .send({ from: walletAddress }, function (err, res) {

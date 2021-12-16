@@ -20,7 +20,7 @@ export default function Deposit() {
   const [balance, setBalance] = useState(0)
   const [participate, setParticipate] = useState(null);
   const [wval, setWval] = useState(0);
-  const [reward=new BigNumber,setReward] = useState(0);
+  const [reward,setReward] = useState(0);
 const pid=config.FUJI.pid
 
   const openNotification = ({ message, description }) => {
@@ -57,9 +57,9 @@ const pid=config.FUJI.pid
   };
 
   function Withdraw(value) {
-
+   let key= web3.utils.toWei(value)
     MasterContract.methods
-      .withdraw(pid, value)
+      .withdraw(pid, key)
       .send({ from: walletAddress }, function (err, res) {
         if (err) {
           openNotification({
@@ -102,7 +102,7 @@ const pid=config.FUJI.pid
         }
         console.log("Reward is: ", res)
 
-            setReward(res/config.decimals)
+            setReward(web3.utils.fromWei(res))
             
       })
      },8000)
