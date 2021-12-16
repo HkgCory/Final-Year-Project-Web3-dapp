@@ -77,12 +77,12 @@ const App = () => {
               justifyContent: "center",
             }}
             defaultSelectedKeys={["quickstart"]}>
-            <Menu.Item key="contract">
+            {/* <Menu.Item key="contract">
               <NavLink to="/contract">📄 Contract</NavLink>
             </Menu.Item>
             <Menu.Item key="wallet">
               <NavLink to="/wallet">👛 Wallet</NavLink>
-            </Menu.Item>
+            </Menu.Item> */}
             {/* <Menu.Item key="balances">
               <NavLink to="/erc20balance">💰 Balances</NavLink>
             </Menu.Item>
@@ -93,7 +93,7 @@ const App = () => {
               <NavLink to="/nftBalance">🖼 NFT Balance</NavLink>
             </Menu.Item> */}
             <Menu.Item key="test">
-              <NavLink to="/testcontract">Farm UI</NavLink>
+              <NavLink to="/">Yield Farming</NavLink>
             </Menu.Item>
             {/* <Menu.Item key="1inch">
               <NavLink to="/1inch">1inch-DEX</NavLink>
@@ -101,13 +101,13 @@ const App = () => {
           </Menu>
           <div style={styles.headerRight}>
             <Chains />
-            <TokenPrice
+            {/* <TokenPrice
               address="0x1f9840a85d5af5bf1d1762f925bdaddc4201f984"
               chain="eth"
               image="https://cloudflare-ipfs.com/ipfs/QmXttGpZrECX5qCyXbBQiqgQNytVGeZW5Anewvh2jc4psg/"
               size="40px"
             />
-            <NativeBalance />
+            <NativeBalance /> */}
             <Account />
             <Blockie currentWallet size={7} scale={5} />
           </div>
@@ -129,7 +129,7 @@ const App = () => {
             <Route path="/nft">
               <NFTBalance />
             </Route> 
-            <Route path="/Testcontract">
+            <Route path="/">
               <Testcontract />
             </Route>
             <Route path="/contract">
@@ -140,7 +140,7 @@ const App = () => {
             </Route>
             {/* <Redirect from="/" to="/wallet" /> */}
           </Switch>
-          <Redirect to="/wallet" />
+          <Redirect to="/" />
           {/* {isAuthenticated ? <Redirect to="/quickstart" /> : <Redirect to="/nonauthenticated" />} */}
         </div>
       </Layout>

@@ -36,9 +36,9 @@ const pid=config.FUJI.pid
 
   function Deposit(value) {
     //write contract
-    let key = BigNumber(value * config.decimals)
+
     MasterContract.methods
-      .deposit(pid, key)
+      .deposit(pid, value)
       .send({ from: walletAddress }, function (err, res) {
         if (err) {
           openNotification({
@@ -57,9 +57,9 @@ const pid=config.FUJI.pid
   };
 
   function Withdraw(value) {
-    let key = BigNumber(value * config.decimals)
+
     MasterContract.methods
-      .withdraw(pid, key)
+      .withdraw(pid, value)
       .send({ from: walletAddress }, function (err, res) {
         if (err) {
           openNotification({
@@ -93,7 +93,7 @@ const pid=config.FUJI.pid
         setParticipate(false);
       }
     })
-    if (participate){
+
     setInterval(function(){ 
     MasterContract.methods.pendingFYP(pid, walletAddress).call(function (err, res) {
         if (err) {
@@ -105,7 +105,7 @@ const pid=config.FUJI.pid
             setReward(res/config.decimals)
             
       })
-     },8000)}
+     },8000)
   };
 
   return (
