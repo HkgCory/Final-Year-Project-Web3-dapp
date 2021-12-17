@@ -42,7 +42,7 @@ export default function Contract() {
 
 
           <Card
-            title="WETH-FYP PID:1"
+            title="WAVAX-FYP PID:1"
             size="small"
             style={{ marginBottom: "20px" }}
           //card name
