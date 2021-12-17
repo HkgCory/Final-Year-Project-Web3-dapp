@@ -4,18 +4,27 @@ import Approve from "./components/Approve"
 import Widthdraw from "./components/Withdraw"
 import config from "contracts/config"
 import Prices from "./components/Price"
-
-
+import { useWeb3React, Web3ReactProvider } from '@web3-react/core'
+import Web3 from "web3"
 export default function Contract() {
 
 
-function AlertIt() {
-var answer = window.confirm("Please click on OK to continue.")
-if (answer)
-window.open="http://www.google.com";
-}
+// function AlertIt() {
+// var answer = window.confirm("Please click on OK to continue.")
+// if (answer){
+// console.log(`redireact`)
+// // window.open="http://www.google.com";
+// console.log(`redireact${account}`)}
+// }
+// var Accounts = require('web3-eth-accounts');
+// var accounts = new Accounts('ws://localhost:8546');
+// const web3 = new Web3("https://api.avax-test.network/ext/bc/C/rpc");
+// const web3=new Web3
+// const provider = new Web3.provider.HttpProvider('http://127.0.0.1:7545')
+// const web = new Web3(provider)
+// const {active ,account,library,connector ,chainId,activate,deactivate }=useWeb3React()
 
-
+// activate(chainId)
 
   return (
     <div style={{ margin: "auto", width: "80vw", minLength: "60vw" }}>
@@ -54,11 +63,11 @@ window.open="http://www.google.com";
 
         </Form>
       </Card>
-      <Card>
+      {/* <Card>
        
-   <Button onClick={AlertIt}>click</Button>
-
-      </Card>
+   <Button type="submit" onClick={()=>AlertIt()}>click</Button>
+      <span>{`walletAddress: ${account,active,chainId}`}</span>
+      </Card> */}
 
     </div>
 
