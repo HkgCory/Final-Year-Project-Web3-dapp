@@ -29,7 +29,7 @@
   },
   "scripts": {
     "start": "craco start",
-    "build": "react-scripts build",
+    "build": "craco build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "devchain": "cd Truffle && ganache-cli -d --db data -i 1337 --port 7545",
