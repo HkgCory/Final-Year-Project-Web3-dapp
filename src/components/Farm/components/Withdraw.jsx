@@ -112,12 +112,12 @@ const pid=config.FUJI.pid
     <>
 
 <Button type="submit" onClick={() => Participate()}>
-        Chcek your participate
+        Chcek Your Partcipation
       </Button>{participate == null ?"":
 participate == false ?
 <>
 <p>
-  <Text>Please deposit frsit</Text>
+  <Text>Please Deposit LP Token First</Text>
 </p>
 
 </>
@@ -128,15 +128,15 @@ participate == false ?
             </Button>
             <Input type='type' id="mytext1" onChange={e => setWval(e.target.value)} placeholder="0" allowClear value={wval} 
             suffix={
-                <Button type="type" onClick={() => setWval(balance)} align="center" size="small" >Withdraw MAX LP</Button>
+                <Button type="type" onClick={() => setWval(balance)} align="center" size="small" >Withdraw Max LP</Button>
             }
             />
             <span>            
-                Reward Earned  {reward} FYP
+                Reward Earned : {reward} FYP
                 <Button type="submit" onClick={() => Deposit(0)}>
               Harvest
             </Button></span>
-            <Form.Item style={{ marginBottom: "5px" }}>Blanace on the pool : {balance} LP
+            <Form.Item style={{ marginBottom: "5px" }}>Staked Balance : {balance} LP
             </Form.Item> 
           </>
       }

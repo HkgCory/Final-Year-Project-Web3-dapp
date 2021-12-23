@@ -22,7 +22,7 @@ export default function Approve() {
   const Masterabi = MasterInfo;
   const masterChefAddress = config.FUJI.MasterChef
   const MasterContract = new web3.eth.Contract(Masterabi, masterChefAddress);
-const pid = config.FUJI.pid;
+  const pid = config.FUJI.pid;
 
   const [balance, setBalance] = useState(0)
   const [right, setRight] = useState(null);
@@ -117,7 +117,7 @@ const pid = config.FUJI.pid;
   return (
     <>
       <Button type="submit" onClick={() => Right()}>
-        Chcek your approval
+        Chcek Your Approval
       </Button>{right == null ? "" :
         right == false ?
           <Button type="submit" onClick={() => Approval()} >
@@ -135,7 +135,7 @@ const pid = config.FUJI.pid;
 
         </>
       }
-            <Form.Item style={{ marginBottom: "5px" }}>Blanace on you wallet : {balance} LP
+            <Form.Item style={{ marginBottom: "5px" }}>Balance In Your Wallet : {balance} LP
 
             </Form.Item>
     </>

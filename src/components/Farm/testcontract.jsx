@@ -31,7 +31,7 @@ export default function Contract() {
       <Card
         title={
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-            Staking LP and Earn FYP
+           FYP Token Liquidity Farming
             <Address avatar="left" copyable address={config.FUJI.LPInfo} size={8} />
           </div>
         }
@@ -42,7 +42,7 @@ export default function Contract() {
 
 
           <Card
-            title="WAVAX-FYP PID:1"
+            title="WAVAX-FYP LP Token, PID:0"
             size="small"
             style={{ marginBottom: "20px" }}
           //card name

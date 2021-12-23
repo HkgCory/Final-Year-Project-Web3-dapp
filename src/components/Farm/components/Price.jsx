@@ -94,9 +94,9 @@ export default function Price() {
                 let Price = await calcPrice() // query pancakeswap to get the price of BNB in USDT
                 console.log(`CURRENT PRICE: ${Price}`);
                 setPrice(Price)
-            }}>check FYP current price</Button>
+            }}>Check Current Price of FYP Token</Button>
             <div>1 FYP = {prices} AVAX</div>
-            <div>The Pool APY : {Apy} %</div>
+            <div>The Pool Interest Rate (APR) : {Apy} %</div>
         </>
     )
 }
