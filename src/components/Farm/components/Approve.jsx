@@ -130,7 +130,7 @@ export default function Approve() {
           </Button>
           <Input type='type' id="mytext1" onChange={e => setDval(e.target.value)}  placeholder="0" allowClear value={dval} 
           suffix={
-            <Button type="type" onClick={() => setDval(balance)} align="center" size="small" >Deposit Max LP</Button>
+            <Button type="type" onClick={() => setDval(balance)} align="center" size="small" >Deposit Max FYP-AVAX LP</Button>
           } />
 
         </>

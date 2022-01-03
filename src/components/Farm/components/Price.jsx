@@ -34,10 +34,7 @@ export default function Price() {
     let masterAddress= config.FUJI.MasterChef.toLowerCase();
     const [prices, setPrice] = useState(0)
     const [Apy,setApy]= useState(0)
-    async function calcPrice() {
-
-       
-
+    const calcPrice= async function() {
         let fypprice; 
         let ToSell = web3.utils.toWei("1", "ether");
         try {
@@ -84,17 +81,19 @@ export default function Price() {
             APY = fypprice*fypperBlock*yearBock/(Number(fypprice*balFYP)+Number(balWAVAX))*100/balMaster*totalSupply
             console.log(`APY ${APY}`)
             setApy(APY)
-            if (!fypprice) return 0;
-            return fypprice;
+            setPrice(fypprice)
+            // if (!fypprice) return 0;
+            // return fypprice;
     }
+    calcPrice()
 
     return (
         <>
-            <Button onClick={async () => {
+            {/* <Button onClick={async () => {
                 let Price = await calcPrice() // query pancakeswap to get the price of BNB in USDT
                 console.log(`CURRENT PRICE: ${Price}`);
                 setPrice(Price)
-            }}>Check Current Price of FYP Token</Button>
+            }}>Check Current Price of FYP Token</Button> */}
             <div>1 FYP = {prices} AVAX</div>
             <div>The Pool Interest Rate (APR) : {Apy} %</div>
         </>
