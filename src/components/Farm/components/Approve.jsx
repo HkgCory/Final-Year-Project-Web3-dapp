@@ -13,7 +13,8 @@ export default function Approve() {
 
   const { Moralis, web3 } = useMoralis();
   const { chainId, walletAddress } = useMoralisDapp();
-  const approveValue = config.approve
+  // const approveValue = config.approve
+  let approveValue =web3.utils.toWei('100000000000000000')
 //Pair
   const LPabi = LPInfo;
   const LPAddress = config.FUJI.LPInfo
@@ -94,7 +95,7 @@ export default function Approve() {
         return
       }
       console.log("The allowance is: ", res)
-      if (res == 100000000000000000000000000000000000) {
+      if (res == approveValue) {
         setRight(true);
       } else {
         setRight(false);

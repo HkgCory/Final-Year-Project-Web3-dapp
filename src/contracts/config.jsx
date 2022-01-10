@@ -1,5 +1,5 @@
 import BigNumber from "bignumber.js"
-
+const Web3 = require('web3');
 const config = {
     ROP: {
         MasterChef: "0x3a69A544fd917327852f5606E55FB29E16281e25",
@@ -27,6 +27,7 @@ const config = {
         networks: 43114
     },
 
+    
     approve: BigNumber(100000000000000000000000000000000000),
     decimal: 35,
     decimals: BigNumber(1000000000000000000),
