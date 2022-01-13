@@ -51,7 +51,7 @@ export default function Price() {
         let balMaster
         let APY= web3.utils.fromWei('0')
         let fypperBlock
-        let yearBock = web3.utils.fromWei('15778463','wei');
+        let yearBock = web3.utils.fromWei('10512000','wei');
 
             let fypcontract = await new web3.eth.Contract(fypabi, FYPAddress);
             balFYP = await fypcontract.methods.balanceOf(LPaddress).call();
