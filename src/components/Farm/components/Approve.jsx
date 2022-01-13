@@ -118,7 +118,7 @@ export default function Approve() {
   return (
     <>
       <Button type="submit" onClick={() => Right()}>
-        Chcek Your Approval
+        Check Your Approval
       </Button>{right == null ? "" :
         right == false ?
           <Button type="submit" onClick={() => Approval()} >
