@@ -112,7 +112,7 @@ const pid=config.FUJI.pid
     <>
 
 <Button type="submit" onClick={() => Participate()}>
-        Chcek Your Partcipation
+        Check Your Partcipation
       </Button>{participate == null ?"":
 participate == false ?
 <>
