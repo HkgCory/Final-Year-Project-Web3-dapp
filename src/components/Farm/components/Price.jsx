@@ -78,7 +78,7 @@ export default function Price() {
             console.log(`fypperBlock ${fypperBlock}`)
             console.log(`yearBock ${yearBock}`)
 
-            APY = fypprice*fypperBlock*yearBock/(Number(fypprice*balFYP)+Number(balWAVAX))*100/balMaster*totalSupply
+            APY = 100*(fypprice*fypperBlock*yearBock)/(Number(fypprice*balFYP))/balMaster*totalSupply
             console.log(`APY ${APY}`)
             setApy(APY)
             setPrice(fypprice)
