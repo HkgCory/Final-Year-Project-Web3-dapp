@@ -51,7 +51,7 @@ export default function Price() {
         let balMaster
         let APR= web3.utils.fromWei('0')
         let fypperBlock
-        let yearBock = web3.utils.fromWei('10512000','wei');
+        let yearBlock = web3.utils.fromWei('10512000','wei');
 
             let fypcontract = await new web3.eth.Contract(fypabi, FYPAddress);
             balFYP = await fypcontract.methods.balanceOf(LPaddress).call();
@@ -76,9 +76,9 @@ export default function Price() {
             fypperBlock = await mastercontract.methods.fypPerBlock().call();
             fypperBlock = web3.utils.fromWei(fypperBlock);
             console.log(`fypperBlock ${fypperBlock}`)
-            console.log(`yearBock ${yearBock}`)
+            console.log(`yearBlock ${yearBlock}`)
 
-            APR = 100*(fypprice*fypperBlock*yearBock)/(Number(fypprice*balFYP)*balMaster/totalSupply)
+            APR = 100*(fypprice*fypperBlock*yearBlock)/(Number(fypprice*balFYP)*balMaster/totalSupply)
             console.log(`APR ${APR}`)
             setApr(APR)
             setPrice(fypprice)
