@@ -33,7 +33,7 @@ export default function Price() {
 
     let masterAddress= config.FUJI.MasterChef.toLowerCase();
     const [prices, setPrice] = useState(0)
-    const [Apy,setApy]= useState(0)
+    const [Apr,setApr]= useState(0)
     const calcPrice= async function() {
         let fypprice; 
         let ToSell = web3.utils.toWei("1", "ether");
@@ -49,7 +49,7 @@ export default function Price() {
         let balWAVAX
         let totalSupply
         let balMaster
-        let APY= web3.utils.fromWei('0')
+        let APR= web3.utils.fromWei('0')
         let fypperBlock
         let yearBock = web3.utils.fromWei('10512000','wei');
 
@@ -78,9 +78,9 @@ export default function Price() {
             console.log(`fypperBlock ${fypperBlock}`)
             console.log(`yearBock ${yearBock}`)
 
-            APY = 100*(fypprice*fypperBlock*yearBock)/(Number(fypprice*balFYP)*balMaster/totalSupply)
-            console.log(`APY ${APY}`)
-            setApy(APY)
+            APR = 100*(fypprice*fypperBlock*yearBock)/(Number(fypprice*balFYP)*balMaster/totalSupply)
+            console.log(`APR ${APR}`)
+            setApr(APR)
             setPrice(fypprice)
             // if (!fypprice) return 0;
             // return fypprice;
@@ -95,7 +95,7 @@ export default function Price() {
                 setPrice(Price)
             }}>Check Current Price of FYP Token</Button> */}
             <div>1 FYP = {prices} AVAX</div>
-            <div>The Pool Interest Rate (APR) : {Apy} %</div>
+            <div>The Pool Interest Rate (APR) : {Apr} %</div>
         </>
     )
 }
