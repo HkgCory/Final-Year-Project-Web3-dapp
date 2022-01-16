@@ -42,7 +42,7 @@ const pid=config.FUJI.pid
       .send({ from: walletAddress }, function (err, res) {
         if (err) {
           openNotification({
-            message: "transfer failled",
+            message: "transfer failed",
             description: `📃 Tx Hash: ${err}`,
           });
           console.log("An error occured", err)
@@ -63,7 +63,7 @@ const pid=config.FUJI.pid
       .send({ from: walletAddress }, function (err, res) {
         if (err) {
           openNotification({
-            message: "transfer failled",
+            message: "transfer failed",
             description: `📃 Tx Hash: ${err}`,
           });
           console.log("An error occured", err)
