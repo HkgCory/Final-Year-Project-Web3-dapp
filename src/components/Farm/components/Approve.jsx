@@ -109,7 +109,7 @@ export default function Approve() {
       }
       console.log("The balances are: ", res);
       // let key =BigNumber(res/config.decimals)
-      setBalance(web3.utils.fromWei(res.amount));
+      setBalance(web3.utils.fromWei(res));
 
     })
       //
