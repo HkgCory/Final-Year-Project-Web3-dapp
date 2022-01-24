@@ -88,7 +88,8 @@ const pid=config.FUJI.pid
       console.log("Staked: ", res)
       if (res.amount != 0) {
         setParticipate(true);
-        setBalance(res.amount/config.decimals);
+        setBalance(web3.utils.fromWei(res.amount));
+
       } else {
         setParticipate(false);
       }
