@@ -1,4 +1,4 @@
-# `ethereum-boilerplate`
+# `Develop on top of ethereum-boilerplate`
 
 > React components and hooks for fast building dApps without running own backend
 
